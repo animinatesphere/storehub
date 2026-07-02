@@ -1,35 +1,53 @@
 import type { NextConfig } from "next";
 import path from "path";
 
-// Native binaries that only exist for the host platform at install time.
-// webpack must never try to bundle these — they are loaded by Node.js at runtime.
+// All platform-specific Remotion compositor packages.
+// None of these should ever be bundled — they're native binaries loaded by
+// Node.js at runtime. We stub them for static analysis (Turbopack / webpack)
+// while serverExternalPackages ensures the real binaries are used at runtime.
 const REMOTION_COMPOSITOR_PACKAGES = [
   "@remotion/compositor-darwin-arm64",
   "@remotion/compositor-darwin-x64",
   "@remotion/compositor-linux-x64-gnu",
   "@remotion/compositor-linux-x64-musl",
+  "@remotion/compositor-linux-arm64-gnu",
+  "@remotion/compositor-linux-arm64-musl",
   "@remotion/compositor-win32-x64-msvc",
 ];
 
+const stub = path.resolve(process.cwd(), "src/lib/remotion-stub.js");
+
 const nextConfig: NextConfig = {
-  // Keep Remotion server packages out of the server bundle so they are
-  // required() natively at runtime (where the correct platform binary exists).
+  // Mark every Remotion package + esbuild as server-external so Next.js emits
+  // require() calls instead of bundling them. At runtime Node.js loads the
+  // correct platform binary directly from node_modules.
   serverExternalPackages: [
     "@remotion/renderer",
     "@remotion/bundler",
     "remotion",
+    "esbuild",
     ...REMOTION_COMPOSITOR_PACKAGES,
   ],
 
+  // Turbopack alias table — redirects all non-bundleable packages to the empty
+  // stub during Turbopack's static analysis pass.  This does NOT affect runtime
+  // because server-external packages are required() natively, bypassing the alias.
+  turbopack: {
+    resolveAlias: Object.fromEntries([
+      ...REMOTION_COMPOSITOR_PACKAGES.map((pkg) => [pkg, stub]),
+      ["esbuild", stub],
+    ]),
+  },
+
+  // Webpack alias table — same idea for when webpack is the bundler.
   webpack: (config, { isServer }) => {
     if (!isServer) {
-      // The CLIENT bundle must not attempt to include platform-specific native
-      // binaries.  Point every compositor package to an empty stub so that
-      // webpack can finish the build even though remotion/renderer references them.
-      const stub = path.resolve(process.cwd(), "src/lib/remotion-stub.js");
-      const aliases = config.resolve?.alias ?? {};
+      const aliases: Record<string, string> = {
+        ...(config.resolve?.alias as Record<string, string> ?? {}),
+        esbuild: stub,
+      };
       for (const pkg of REMOTION_COMPOSITOR_PACKAGES) {
-        (aliases as Record<string, string>)[pkg] = stub;
+        aliases[pkg] = stub;
       }
       config.resolve = { ...config.resolve, alias: aliases };
     }

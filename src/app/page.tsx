@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
-
-const LaunchVideoPlayer = dynamic(() => import("@/components/LaunchVideoPlayer"), { ssr: false });
+import LaunchVideoWrapper from "@/components/LaunchVideoWrapper";
 
 function Check({ dark = false }: { dark?: boolean }) {
   return (
@@ -143,7 +141,7 @@ export default function LandingPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">See what we&apos;re building</h2>
         </div>
         <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
-          <LaunchVideoPlayer />
+          <LaunchVideoWrapper />
         </div>
       </section>
 
