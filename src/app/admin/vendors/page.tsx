@@ -8,6 +8,7 @@ import {
   adminVerifyVendor,
 } from "@/app/actions/admin";
 
+export const dynamic = "force-dynamic";
 export const metadata = { title: "Vendors — Admin" };
 
 function naira(n: number) {

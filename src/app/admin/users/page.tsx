@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { UserRole } from "@/generated/prisma/client";
 import { adminSetUserRole, adminSetUserSuspended } from "@/app/actions/admin";
 
+export const dynamic = "force-dynamic";
 export const metadata = { title: "Users — Admin" };
 
 const ROLE_COLOR: Record<UserRole, string> = {

@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import { TIER, TIER_ORDER } from "@/lib/tier";
 import { SubscriptionTier } from "@/generated/prisma/client";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = { title: "Admin overview — StoreHub" };
 
 function naira(n: number) {

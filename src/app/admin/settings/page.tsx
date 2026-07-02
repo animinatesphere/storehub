@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { adminUpdateSetting } from "@/app/actions/admin";
 
+export const dynamic = "force-dynamic";
 export const metadata = { title: "Settings — Admin" };
 
 export default async function AdminSettingsPage({

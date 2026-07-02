@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { ProductStatus } from "@/generated/prisma/client";
 import { adminArchiveProduct, adminRestoreProduct } from "@/app/actions/admin";
 
+export const dynamic = "force-dynamic";
 export const metadata = { title: "Products — Admin" };
 
 const STATUS_COLOR: Record<ProductStatus, string> = {
