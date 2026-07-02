@@ -125,8 +125,8 @@ export default function BoldTemplate({ vendor, username }: TemplateProps) {
             <img
               src={logoUrl}
               alt={vendor.businessName}
-              className="w-20 h-20 rounded-2xl object-cover mx-auto mb-8 ring-2"
-              style={{ boxShadow: `0 0 60px ${brandColor}60`, ringColor: brandColor }}
+              className="w-20 h-20 rounded-2xl object-cover mx-auto mb-8"
+              style={{ boxShadow: `0 0 60px ${brandColor}60`, outline: `2px solid ${brandColor}`, outlineOffset: "2px" }}
             />
           ) : (
             <div
