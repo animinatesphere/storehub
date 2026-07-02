@@ -1,10 +1,10 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 import CheckoutForm from "./_components/CheckoutForm";
 
-export const metadata = { title: "Checkout — StoreHub" };
+export const metadata = { title: "Checkout — ClientFlow" };
 
 function naira(n: number) {
   return new Intl.NumberFormat("en-NG", {
@@ -63,7 +63,7 @@ export default async function CheckoutPage({
             </svg>
             {product.vendor.businessName}
           </Link>
-          <Link href="/" className="text-sm font-bold text-slate-900">StoreHub</Link>
+          <Link href="/" className="text-sm font-bold text-slate-900">ClientFlow</Link>
           <div className="w-16" />
         </div>
       </header>
@@ -125,7 +125,7 @@ export default async function CheckoutPage({
             <div className="flex flex-col gap-2">
               {[
                 "Payment secured by Paystack",
-                "Seller verified on StoreHub",
+                "Seller verified on ClientFlow",
                 "Your email keeps a record of this purchase",
               ].map((text) => (
                 <div key={text} className="flex items-center gap-2 text-xs text-slate-400">

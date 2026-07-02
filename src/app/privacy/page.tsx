@@ -1,9 +1,9 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — StoreHub",
-  description: "StoreHub Privacy Policy. Learn how we collect, use, and protect your personal information.",
+  title: "Privacy Policy — ClientFlow",
+  description: "ClientFlow Privacy Policy. Learn how we collect, use, and protect your personal information.",
 };
 
 export default function PrivacyPage() {
@@ -37,10 +37,10 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3">1. Introduction</h2>
             <p>
-              StoreHub (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the StoreHub platform, which allows sellers (&quot;Vendors&quot;) to create online storefronts and accept payments from buyers. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform.
+              ClientFlow (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the ClientFlow platform, which allows sellers (&quot;Vendors&quot;) to create online storefronts and accept payments from buyers. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform.
             </p>
             <p className="mt-3">
-              By using StoreHub, you agree to the collection and use of information in accordance with this policy. If you do not agree with the terms of this policy, please do not access the platform.
+              By using ClientFlow, you agree to the collection and use of information in accordance with this policy. If you do not agree with the terms of this policy, please do not access the platform.
             </p>
           </section>
 
@@ -67,7 +67,7 @@ export default function PrivacyPage() {
             <h2 className="text-base font-bold text-gray-900 mb-3">3. How We Use Your Information</h2>
             <p>We use the information we collect to:</p>
             <ul className="list-disc pl-5 space-y-1 mt-2">
-              <li>Create and manage your StoreHub account</li>
+              <li>Create and manage your ClientFlow account</li>
               <li>Display your storefront and products to buyers</li>
               <li>Process orders and facilitate payments through Paystack</li>
               <li>Send transactional emails (order confirmations, payment receipts)</li>
@@ -93,14 +93,14 @@ export default function PrivacyPage() {
             <h2 className="text-base font-bold text-gray-900 mb-3">5. Data Retention</h2>
             <p>
               We retain your account information for as long as your account is active, or as necessary to provide you with our services. You may request deletion of your account and associated data at any time by contacting us at{" "}
-              <a href="mailto:privacy@storehub.ng" className="text-emerald-600 hover:underline">privacy@storehub.ng</a>. We may retain certain information as required by law.
+              <a href="mailto:privacy@ClientFlow.ng" className="text-emerald-600 hover:underline">privacy@ClientFlow.ng</a>. We may retain certain information as required by law.
             </p>
           </section>
 
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3">6. Security</h2>
             <p>
-              We implement industry-standard security measures including encrypted connections (HTTPS), hashed passwords, and secure infrastructure. However, no method of transmission over the internet is 100% secure. We encourage you to use a strong, unique password for your StoreHub account.
+              We implement industry-standard security measures including encrypted connections (HTTPS), hashed passwords, and secure infrastructure. However, no method of transmission over the internet is 100% secure. We encourage you to use a strong, unique password for your ClientFlow account.
             </p>
           </section>
 
@@ -126,7 +126,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3">9. Changes to This Policy</h2>
             <p>
-              We may update this Privacy Policy from time to time. We will notify you of significant changes by email or through a notice on our platform. Your continued use of StoreHub after changes constitutes acceptance of the updated policy.
+              We may update this Privacy Policy from time to time. We will notify you of significant changes by email or through a notice on our platform. Your continued use of ClientFlow after changes constitutes acceptance of the updated policy.
             </p>
           </section>
 
@@ -134,7 +134,7 @@ export default function PrivacyPage() {
             <h2 className="text-base font-bold text-gray-900 mb-3">10. Contact Us</h2>
             <p>
               For privacy-related questions or requests, please contact us at:{" "}
-              <a href="mailto:privacy@storehub.ng" className="text-emerald-600 hover:underline">privacy@storehub.ng</a>
+              <a href="mailto:privacy@ClientFlow.ng" className="text-emerald-600 hover:underline">privacy@ClientFlow.ng</a>
             </p>
           </section>
         </div>
@@ -142,7 +142,7 @@ export default function PrivacyPage() {
 
       <footer className="border-t border-gray-100 py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-4 items-center">
-          <p className="text-xs text-gray-400">© {new Date().getFullYear()} StoreHub. All rights reserved.</p>
+          <p className="text-xs text-gray-400">© {new Date().getFullYear()} ClientFlow. All rights reserved.</p>
           <nav className="flex gap-6 text-xs text-gray-400">
             <Link href="/about" className="hover:text-gray-700 transition-colors">About</Link>
             <Link href="/terms" className="hover:text-gray-700 transition-colors">Terms</Link>

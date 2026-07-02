@@ -1,9 +1,9 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — StoreHub",
-  description: "StoreHub Terms of Service. Read the terms and conditions governing your use of the StoreHub platform.",
+  title: "Terms of Service — ClientFlow",
+  description: "ClientFlow Terms of Service. Read the terms and conditions governing your use of the ClientFlow platform.",
 };
 
 export default function TermsPage() {
@@ -35,21 +35,21 @@ export default function TermsPage() {
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3">1. Acceptance of Terms</h2>
             <p>
-              By accessing or using StoreHub (&quot;the Platform&quot;), you agree to be bound by these Terms of Service (&quot;Terms&quot;). If you do not agree to all of these Terms, do not use the Platform. These Terms apply to all visitors, vendors, buyers, and others who access or use StoreHub.
+              By accessing or using ClientFlow (&quot;the Platform&quot;), you agree to be bound by these Terms of Service (&quot;Terms&quot;). If you do not agree to all of these Terms, do not use the Platform. These Terms apply to all visitors, vendors, buyers, and others who access or use ClientFlow.
             </p>
           </section>
 
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3">2. Description of Service</h2>
             <p>
-              StoreHub provides a platform that enables individuals and businesses (&quot;Vendors&quot;) to create online storefronts, list products, and receive payments from customers (&quot;Buyers&quot;). StoreHub acts as a technology provider and marketplace, not as a party to transactions between Vendors and Buyers.
+              ClientFlow provides a platform that enables individuals and businesses (&quot;Vendors&quot;) to create online storefronts, list products, and receive payments from customers (&quot;Buyers&quot;). ClientFlow acts as a technology provider and marketplace, not as a party to transactions between Vendors and Buyers.
             </p>
           </section>
 
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3">3. Account Registration</h2>
             <p>
-              To use StoreHub as a Vendor, you must create an account. You agree to:
+              To use ClientFlow as a Vendor, you must create an account. You agree to:
             </p>
             <ul className="list-disc pl-5 space-y-1 mt-2">
               <li>Provide accurate, current, and complete information during registration</li>
@@ -80,7 +80,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3">5. Fees and Payments</h2>
             <p>
-              StoreHub charges a commission on each successful transaction processed through the platform. The commission rate is displayed in your vendor dashboard and may vary by subscription tier. Payments are processed through Paystack, and payouts are subject to Paystack&apos;s processing schedules and terms.
+              ClientFlow charges a commission on each successful transaction processed through the platform. The commission rate is displayed in your vendor dashboard and may vary by subscription tier. Payments are processed through Paystack, and payouts are subject to Paystack&apos;s processing schedules and terms.
             </p>
             <p className="mt-3">
               We reserve the right to change fee structures with 30 days&apos; notice to active vendors. Continued use of the platform after fee changes constitutes acceptance of the new rates.
@@ -89,7 +89,7 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3">6. Prohibited Content</h2>
-            <p>You may not use StoreHub to sell or promote:</p>
+            <p>You may not use ClientFlow to sell or promote:</p>
             <ul className="list-disc pl-5 space-y-1 mt-2">
               <li>Counterfeit, fake, or replica products misrepresented as genuine</li>
               <li>Illegal goods, controlled substances, or weapons</li>
@@ -104,24 +104,24 @@ export default function TermsPage() {
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3">7. Intellectual Property</h2>
             <p>
-              You retain ownership of content you upload to StoreHub (product images, descriptions, logos). By uploading content, you grant StoreHub a non-exclusive, royalty-free licence to display, reproduce, and distribute your content for the purpose of operating the platform, including displaying your storefront to potential buyers.
+              You retain ownership of content you upload to ClientFlow (product images, descriptions, logos). By uploading content, you grant ClientFlow a non-exclusive, royalty-free licence to display, reproduce, and distribute your content for the purpose of operating the platform, including displaying your storefront to potential buyers.
             </p>
             <p className="mt-3">
-              The StoreHub brand, logo, and platform design are owned by StoreHub and may not be used without prior written consent.
+              The ClientFlow brand, logo, and platform design are owned by ClientFlow and may not be used without prior written consent.
             </p>
           </section>
 
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3">8. Termination</h2>
             <p>
-              StoreHub reserves the right to suspend or terminate your account at any time for violation of these Terms, fraudulent activity, or for any reason with 7 days&apos; notice. You may close your account at any time by contacting support. Upon termination, your storefront will be taken offline, but we may retain transaction records as required by law.
+              ClientFlow reserves the right to suspend or terminate your account at any time for violation of these Terms, fraudulent activity, or for any reason with 7 days&apos; notice. You may close your account at any time by contacting support. Upon termination, your storefront will be taken offline, but we may retain transaction records as required by law.
             </p>
           </section>
 
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3">9. Limitation of Liability</h2>
             <p>
-              StoreHub is a technology platform and is not responsible for the quality, safety, or legality of products sold by vendors, or for the accuracy of vendor listings. All disputes arising from transactions are between Buyers and Vendors. StoreHub&apos;s total liability to you shall not exceed the fees paid by you in the 3 months preceding the claim.
+              ClientFlow is a technology platform and is not responsible for the quality, safety, or legality of products sold by vendors, or for the accuracy of vendor listings. All disputes arising from transactions are between Buyers and Vendors. ClientFlow&apos;s total liability to you shall not exceed the fees paid by you in the 3 months preceding the claim.
             </p>
           </section>
 
@@ -135,7 +135,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-base font-bold text-gray-900 mb-3">11. Changes to Terms</h2>
             <p>
-              We may modify these Terms at any time. We will notify you of material changes via email or platform notice. Your continued use of StoreHub after changes constitutes acceptance of the updated Terms.
+              We may modify these Terms at any time. We will notify you of material changes via email or platform notice. Your continued use of ClientFlow after changes constitutes acceptance of the updated Terms.
             </p>
           </section>
 
@@ -143,7 +143,7 @@ export default function TermsPage() {
             <h2 className="text-base font-bold text-gray-900 mb-3">12. Contact</h2>
             <p>
               For questions about these Terms, contact us at{" "}
-              <a href="mailto:legal@storehub.ng" className="text-emerald-600 hover:underline">legal@storehub.ng</a>.
+              <a href="mailto:legal@ClientFlow.ng" className="text-emerald-600 hover:underline">legal@ClientFlow.ng</a>.
             </p>
           </section>
         </div>
@@ -151,7 +151,7 @@ export default function TermsPage() {
 
       <footer className="border-t border-gray-100 py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-4 items-center">
-          <p className="text-xs text-gray-400">© {new Date().getFullYear()} StoreHub. All rights reserved.</p>
+          <p className="text-xs text-gray-400">© {new Date().getFullYear()} ClientFlow. All rights reserved.</p>
           <nav className="flex gap-6 text-xs text-gray-400">
             <Link href="/about" className="hover:text-gray-700 transition-colors">About</Link>
             <Link href="/privacy" className="hover:text-gray-700 transition-colors">Privacy</Link>

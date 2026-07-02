@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+﻿import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { SubscriptionTier } from "@/generated/prisma/client";
@@ -6,7 +6,7 @@ import { TIER, TIER_ORDER } from "@/lib/tier";
 import UpgradeButton from "./_components/UpgradeButton";
 import { adminSetOwnTier } from "@/app/actions/admin";
 
-export const metadata = { title: "Settings — StoreHub" };
+export const metadata = { title: "Settings — ClientFlow" };
 
 function naira(n: number) {
   return new Intl.NumberFormat("en-NG", {

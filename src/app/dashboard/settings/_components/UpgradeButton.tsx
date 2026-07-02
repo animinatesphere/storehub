@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { initUpgrade, applyUpgrade } from "@/app/actions/subscription";
@@ -52,7 +52,7 @@ export default function UpgradeButton({ tier, label, priceNGN, email }: Props) {
         email,
         amount: amountKobo,
         ref:    reference,
-        label:  `StoreHub ${label} Plan`,
+        label:  `ClientFlow ${label} Plan`,
         onSuccess: async (tx: { reference: string }) => {
           setLoading(true);
           await applyUpgrade(tier, tx.reference);

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { loginUser } from "@/app/actions/auth";
 import { signIn } from "@/lib/auth";
 
-export const metadata = { title: "Sign in — StoreHub" };
+export const metadata = { title: "Sign in — ClientFlow" };
 
 const PANEL_IMG =
   "https://images.unsplash.com/photo-1530785602389-07594beb8b73?w=900&auto=format&fit=crop&q=80";
@@ -45,14 +45,14 @@ export default async function LoginPage({
 
         <div className="relative z-10 flex flex-col justify-between w-full p-12">
           <Link href="/" className="text-white text-xl font-bold tracking-tight">
-            StoreHub
+            ClientFlow
           </Link>
 
           <div>
             <div className="w-8 h-0.5 bg-white/40 mb-6" />
             <blockquote>
               <p className="text-white text-2xl font-medium leading-relaxed">
-                &ldquo;I share my StoreHub link on my WhatsApp status every morning.
+                &ldquo;I share my ClientFlow link on my WhatsApp status every morning.
                 Orders come in while I sleep.&rdquo;
               </p>
               <footer className="mt-5 text-white/50 text-sm">
@@ -81,12 +81,12 @@ export default async function LoginPage({
         <div className="w-full max-w-md">
 
           <div className="lg:hidden mb-8">
-            <Link href="/" className="text-2xl font-bold text-slate-900">StoreHub</Link>
+            <Link href="/" className="text-2xl font-bold text-slate-900">ClientFlow</Link>
           </div>
 
           <div className="mb-8">
             <h1 className="text-2xl font-bold text-slate-900">Welcome back</h1>
-            <p className="mt-1.5 text-slate-500 text-sm">Sign in to your StoreHub account</p>
+            <p className="mt-1.5 text-slate-500 text-sm">Sign in to your ClientFlow account</p>
           </div>
 
           {error && (

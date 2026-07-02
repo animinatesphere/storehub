@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
@@ -38,7 +38,7 @@ export async function GET() {
   return new NextResponse(csv, {
     headers: {
       "Content-Type":        "text/csv; charset=utf-8",
-      "Content-Disposition": `attachment; filename="storehub-vendors-${Date.now()}.csv"`,
+      "Content-Disposition": `attachment; filename="ClientFlow-vendors-${Date.now()}.csv"`,
     },
   });
 }

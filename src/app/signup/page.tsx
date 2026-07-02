@@ -3,7 +3,7 @@ import Link from "next/link";
 import { registerUser } from "@/app/actions/auth";
 import { signIn } from "@/lib/auth";
 
-export const metadata = { title: "Create account — StoreHub" };
+export const metadata = { title: "Create account — ClientFlow" };
 
 const PANEL_IMG =
   "https://images.unsplash.com/photo-1602342323893-b11f757957c9?w=900&auto=format&fit=crop&q=80";
@@ -65,7 +65,7 @@ export default async function SignupPage({
 
         <div className="relative z-10 flex flex-col justify-between w-full p-12">
           <Link href="/" className="text-white text-xl font-bold tracking-tight">
-            StoreHub
+            ClientFlow
           </Link>
 
           <div>
@@ -105,7 +105,7 @@ export default async function SignupPage({
         <div className="w-full max-w-md">
 
           <div className="lg:hidden mb-8">
-            <Link href="/" className="text-2xl font-bold text-slate-900">StoreHub</Link>
+            <Link href="/" className="text-2xl font-bold text-slate-900">ClientFlow</Link>
           </div>
 
           <div className="mb-8">
@@ -115,7 +115,7 @@ export default async function SignupPage({
             <p className="mt-1.5 text-slate-500 text-sm">
               {isVendor
                 ? "Free forever on the basic plan. No credit card required."
-                : "Join StoreHub and shop from the best Nigerian sellers."}
+                : "Join ClientFlow and shop from the best Nigerian sellers."}
             </p>
           </div>
 

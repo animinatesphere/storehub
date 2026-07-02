@@ -1,4 +1,4 @@
-import { SubscriptionTier } from "@/generated/prisma/client";
+﻿import { SubscriptionTier } from "@/generated/prisma/client";
 
 export type TierConfig = {
   label:            string;
@@ -25,7 +25,7 @@ export const TIER: Record<SubscriptionTier, TierConfig> = {
       "Public storefront (/shop/username)",
       "Secure Paystack checkout",
       "Email receipt for buyers",
-      "StoreHub marketplace listing",
+      "ClientFlow marketplace listing",
     ],
   },
 

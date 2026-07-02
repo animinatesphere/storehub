@@ -1,7 +1,7 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 
-export const metadata = { title: "Order confirmed — StoreHub" };
+export const metadata = { title: "Order confirmed — ClientFlow" };
 
 function naira(n: number) {
   return new Intl.NumberFormat("en-NG", {
@@ -36,7 +36,7 @@ export default async function CheckoutSuccessPage({
       {/* Nav */}
       <header className="bg-white border-b border-slate-100">
         <div className="max-w-xl mx-auto px-5 h-14 flex items-center justify-center">
-          <Link href="/" className="text-sm font-bold text-slate-900">StoreHub</Link>
+          <Link href="/" className="text-sm font-bold text-slate-900">ClientFlow</Link>
         </div>
       </header>
 

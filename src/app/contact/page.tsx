@@ -1,9 +1,9 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us — StoreHub",
-  description: "Get in touch with the StoreHub team. We're here to help with your selling journey.",
+  title: "Contact Us — ClientFlow",
+  description: "Get in touch with the ClientFlow team. We're here to help with your selling journey.",
 };
 
 export default function ContactPage() {
@@ -43,7 +43,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-gray-900">Email Support</p>
-                  <a href="mailto:support@storehub.ng" className="text-sm text-emerald-600 hover:underline">support@storehub.ng</a>
+                  <a href="mailto:support@ClientFlow.ng" className="text-sm text-emerald-600 hover:underline">support@ClientFlow.ng</a>
                   <p className="text-xs text-gray-400 mt-0.5">Response within 24 hours</p>
                 </div>
               </div>
@@ -85,7 +85,7 @@ export default function ContactPage() {
             <div className="mt-10 pt-8 border-t border-gray-100">
               <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Quick Links</p>
               <div className="space-y-2">
-                <Link href="/about" className="block text-sm text-gray-500 hover:text-gray-900 transition-colors">About StoreHub →</Link>
+                <Link href="/about" className="block text-sm text-gray-500 hover:text-gray-900 transition-colors">About ClientFlow →</Link>
                 <Link href="/privacy" className="block text-sm text-gray-500 hover:text-gray-900 transition-colors">Privacy Policy →</Link>
                 <Link href="/terms" className="block text-sm text-gray-500 hover:text-gray-900 transition-colors">Terms of Service →</Link>
                 <Link href="/marketplace" className="block text-sm text-gray-500 hover:text-gray-900 transition-colors">Browse Marketplace →</Link>
@@ -136,7 +136,7 @@ export default function ContactPage() {
 
                 <div className="pt-2">
                   <a
-                    href="mailto:support@storehub.ng"
+                    href="mailto:support@ClientFlow.ng"
                     className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 text-white text-sm font-bold hover:bg-emerald-700 transition-colors"
                   >
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -146,7 +146,7 @@ export default function ContactPage() {
                   </a>
                   <p className="text-xs text-gray-400 text-center mt-3">
                     Or use your preferred email client to send a message to{" "}
-                    <a href="mailto:support@storehub.ng" className="text-emerald-600 hover:underline">support@storehub.ng</a>
+                    <a href="mailto:support@ClientFlow.ng" className="text-emerald-600 hover:underline">support@ClientFlow.ng</a>
                   </p>
                 </div>
               </div>
@@ -167,7 +167,7 @@ export default function ContactPage() {
                   },
                   {
                     q: "How do I delete my account?",
-                    a: "Email us at support@storehub.ng and we'll process your account deletion within 48 hours.",
+                    a: "Email us at support@ClientFlow.ng and we'll process your account deletion within 48 hours.",
                   },
                 ].map(({ q, a }) => (
                   <div key={q} className="p-4 rounded-xl bg-gray-50 border border-gray-100">
@@ -183,7 +183,7 @@ export default function ContactPage() {
 
       <footer className="border-t border-gray-100 py-8">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-4 items-center">
-          <p className="text-xs text-gray-400">© {new Date().getFullYear()} StoreHub. All rights reserved.</p>
+          <p className="text-xs text-gray-400">© {new Date().getFullYear()} ClientFlow. All rights reserved.</p>
           <nav className="flex gap-6 text-xs text-gray-400">
             <Link href="/about" className="hover:text-gray-700 transition-colors">About</Link>
             <Link href="/privacy" className="hover:text-gray-700 transition-colors">Privacy</Link>

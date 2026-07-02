@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+﻿import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { TIER_ORDER } from "@/lib/tier";
@@ -78,7 +78,7 @@ export async function POST(req: NextRequest) {
     return new NextResponse(fileBuffer, {
       headers: {
         "Content-Type":        "video/mp4",
-        "Content-Disposition": `attachment; filename="storehub-ad-${Date.now()}.mp4"`,
+        "Content-Disposition": `attachment; filename="ClientFlow-ad-${Date.now()}.mp4"`,
         "Cache-Control":       "no-store",
       },
     });

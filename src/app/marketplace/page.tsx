@@ -1,10 +1,10 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { VendorCategory } from "@/generated/prisma/client";
 
 export const metadata = {
-  title: "Marketplace — StoreHub",
-  description: "Browse products from thousands of Nigerian sellers on StoreHub.",
+  title: "Marketplace — ClientFlow",
+  description: "Browse products from thousands of Nigerian sellers on ClientFlow.",
 };
 
 const CATEGORY_LABEL: Record<VendorCategory, string> = {
@@ -81,7 +81,7 @@ export default async function MarketplacePage({
       <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-sm border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 h-14 flex items-center justify-between gap-4">
           <Link href="/" className="text-base font-bold text-slate-900 shrink-0">
-            StoreHub
+            ClientFlow
           </Link>
 
           {/* Search */}
@@ -121,7 +121,7 @@ export default async function MarketplacePage({
         {!q && !categoryFilter && (
           <div className="mb-8 bg-slate-900 rounded-2xl px-8 py-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
             <div>
-              <p className="text-white/50 text-xs uppercase tracking-widest mb-2">StoreHub Marketplace</p>
+              <p className="text-white/50 text-xs uppercase tracking-widest mb-2">ClientFlow Marketplace</p>
               <h1 className="text-2xl sm:text-3xl font-bold text-white leading-snug">
                 Shop from {vendorCount.toLocaleString()}+ Nigerian sellers
               </h1>
@@ -237,7 +237,7 @@ export default async function MarketplacePage({
       {/* Footer */}
       <footer className="border-t border-slate-200 mt-16 py-8 px-5 text-center">
         <p className="text-xs text-slate-400">
-          © {new Date().getFullYear()} StoreHub ·{" "}
+          © {new Date().getFullYear()} ClientFlow ·{" "}
           <Link href="/" className="hover:text-slate-600 transition-colors">Home</Link>
           {" · "}
           <Link href="/signup?role=vendor" className="hover:text-slate-600 transition-colors">Start selling</Link>

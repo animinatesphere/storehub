@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import LaunchVideoWrapper from "@/components/LaunchVideoWrapper";
 
@@ -38,7 +38,7 @@ export default function LandingPage() {
       {/* ── NAV ── */}
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
-          <span className="text-xl font-bold tracking-tight text-slate-900">StoreHub</span>
+          <span className="text-xl font-bold tracking-tight text-slate-900">ClientFlow</span>
           <nav className="hidden md:flex items-center gap-8 text-sm text-slate-600">
             <a href="#how-it-works" className="hover:text-slate-900 transition-colors">How it works</a>
             <a href="#categories" className="hover:text-slate-900 transition-colors">What you can sell</a>
@@ -137,7 +137,7 @@ export default function LandingPage() {
       {/* ── LAUNCH VIDEO (Remotion) ── */}
       <section className="max-w-5xl mx-auto px-5 sm:px-8 pb-16">
         <div className="text-center mb-8">
-          <p className="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-3">StoreHub Preview</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-3">ClientFlow Preview</p>
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">See what we&apos;re building</h2>
         </div>
         <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
@@ -227,7 +227,7 @@ export default function LandingPage() {
                       <div className="w-10 h-10 rounded-full bg-slate-300" />
                       <div>
                         <div className="text-sm font-semibold text-slate-800">Ada Styles</div>
-                        <div className="text-xs text-slate-400">storehub.ng/shop/ada-styles</div>
+                        <div className="text-xs text-slate-400">ClientFlow.ng/shop/ada-styles</div>
                       </div>
                     </div>
                     <div className="grid grid-cols-3 gap-2">
@@ -241,7 +241,7 @@ export default function LandingPage() {
               {
                 step: "03",
                 title: "Share your link and get paid",
-                body: "Your store lives at storehub.ng/shop/yourname. Share it on WhatsApp, Instagram, TikTok. Customers pay via Paystack — money goes straight to your account.",
+                body: "Your store lives at ClientFlow.ng/shop/yourname. Share it on WhatsApp, Instagram, TikTok. Customers pay via Paystack — money goes straight to your account.",
                 visual: (
                   <div className="bg-slate-50 rounded-xl p-5 mb-6 space-y-3">
                     <div className="bg-emerald-50 border border-emerald-100 rounded-lg p-3">
@@ -291,7 +291,7 @@ export default function LandingPage() {
               </h2>
               <ul className="space-y-4">
                 {[
-                  "Your own storefront at storehub.ng/shop/you",
+                  "Your own storefront at ClientFlow.ng/shop/you",
                   "Paystack checkout — card, bank transfer, or USSD",
                   "Automatic payment splitting — platform fee handled, rest goes to you",
                   "Real-time order notifications when a customer buys",
@@ -422,7 +422,7 @@ export default function LandingPage() {
               Powered by Paystack. Money in your account automatically.
             </h2>
             <p className="text-slate-500 leading-relaxed mb-8">
-              Every StoreHub store uses Paystack — Nigeria&apos;s most trusted payment processor — for checkout.
+              Every ClientFlow store uses Paystack — Nigeria&apos;s most trusted payment processor — for checkout.
               When a customer pays, the platform fee is deducted automatically and the rest lands directly in
               your Paystack account. No waiting. No manual transfers.
             </p>
@@ -514,10 +514,10 @@ export default function LandingPage() {
                 tier: "Free",
                 price: "₦0",
                 period: "forever",
-                description: "Perfect for trying StoreHub or selling just a few products.",
+                description: "Perfect for trying ClientFlow or selling just a few products.",
                 products: "Up to 5 products",
                 highlight: false,
-                features: ["1 storefront", "Paystack checkout", "Basic product grid", "Order notifications", "StoreHub branding shown"],
+                features: ["1 storefront", "Paystack checkout", "Basic product grid", "Order notifications", "ClientFlow branding shown"],
                 cta: "Get started free",
               },
               {
@@ -527,7 +527,7 @@ export default function LandingPage() {
                 description: "For sellers who are actively growing and need more room.",
                 products: "Up to 30 products",
                 highlight: false,
-                features: ["Everything in Free", "Remove StoreHub branding", "Custom colors and logo", "Basic sales analytics", "WhatsApp button"],
+                features: ["Everything in Free", "Remove ClientFlow branding", "Custom colors and logo", "Basic sales analytics", "WhatsApp button"],
                 cta: "Start Starter",
               },
               {
@@ -597,7 +597,7 @@ export default function LandingPage() {
             {[
               {
                 q: "Do I need a website or any technical skills?",
-                a: "None at all. If you can fill in a form and upload a photo, you can build a StoreHub store. We handle hosting, security, payments, and everything technical for you.",
+                a: "None at all. If you can fill in a form and upload a photo, you can build a ClientFlow store. We handle hosting, security, payments, and everything technical for you.",
               },
               {
                 q: "How do I receive money from sales?",
@@ -609,11 +609,11 @@ export default function LandingPage() {
               },
               {
                 q: "Can I use my own domain name?",
-                a: "Yes, on the Pro plan and above. Instead of storehub.ng/shop/yourname, you can use yourbrand.com. We walk you through pointing your domain to StoreHub — no technical setup required.",
+                a: "Yes, on the Pro plan and above. Instead of ClientFlow.ng/shop/yourname, you can use yourbrand.com. We walk you through pointing your domain to ClientFlow — no technical setup required.",
               },
               {
                 q: "What is the marketplace?",
-                a: "StoreHub also has a combined marketplace at storehub.ng/marketplace where customers can browse products from all sellers at once. Your products automatically appear there alongside your own storefront.",
+                a: "ClientFlow also has a combined marketplace at ClientFlow.ng/marketplace where customers can browse products from all sellers at once. Your products automatically appear there alongside your own storefront.",
               },
               {
                 q: "Can I upgrade or downgrade my plan?",
@@ -636,7 +636,7 @@ export default function LandingPage() {
             Your store is one link away
           </h2>
           <p className="text-xl text-slate-500 mb-10 leading-relaxed">
-            Nigerian sellers are already using StoreHub to reach customers on WhatsApp,
+            Nigerian sellers are already using ClientFlow to reach customers on WhatsApp,
             Instagram, and beyond. Join them — it takes less than five minutes to go live.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -655,7 +655,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-start justify-between gap-10">
             <div className="max-w-xs">
-              <p className="text-lg font-bold text-slate-900 mb-2">StoreHub</p>
+              <p className="text-lg font-bold text-slate-900 mb-2">ClientFlow</p>
               <p className="text-sm text-slate-400 leading-relaxed">
                 The simplest way for Nigerian sellers to build an online store, share a link, and get paid.
               </p>
@@ -689,7 +689,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-slate-400">© {new Date().getFullYear()} StoreHub. All rights reserved.</p>
+            <p className="text-xs text-slate-400">© {new Date().getFullYear()} ClientFlow. All rights reserved.</p>
             <p className="text-xs text-slate-400">Payments powered by Paystack</p>
           </div>
         </div>

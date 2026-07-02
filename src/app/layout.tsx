@@ -15,9 +15,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "StoreHub — Build your store, share one link, get paid",
+  title: "ClientFlow — Build your store, share one link, get paid",
   description:
-    "StoreHub lets anyone in Nigeria sell online in minutes. Build a storefront, share a link on WhatsApp or Instagram, and accept payments via Paystack — no website skills needed.",
+    "ClientFlow lets anyone in Nigeria sell online in minutes. Build a storefront, share a link on WhatsApp or Instagram, and accept payments via Paystack — no website skills needed.",
 };
 
 export default function RootLayout({

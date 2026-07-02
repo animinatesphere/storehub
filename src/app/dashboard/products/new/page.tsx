@@ -1,11 +1,11 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { createProduct } from "@/app/actions/product";
 import ImageUpload from "@/components/ImageUpload";
 
-export const metadata = { title: "Add product — StoreHub" };
+export const metadata = { title: "Add product — ClientFlow" };
 
 const ERRORS: Record<string, string> = {
   missing_fields: "Please fill in the product name and price.",

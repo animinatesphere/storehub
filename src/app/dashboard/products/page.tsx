@@ -1,11 +1,11 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { ProductStatus } from "@/generated/prisma/client";
 import { setProductStatus, deleteProduct } from "@/app/actions/product";
 
-export const metadata = { title: "Products — StoreHub" };
+export const metadata = { title: "Products — ClientFlow" };
 
 const STATUS_BADGE: Record<ProductStatus, string> = {
   DRAFT:        "bg-slate-100 text-slate-500",

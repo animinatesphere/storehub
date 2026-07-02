@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+﻿import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { v2 as cloudinary } from "cloudinary";
 
@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
   const result = await new Promise<{ secure_url: string }>((resolve, reject) => {
     cloudinary.uploader.upload_stream(
       {
-        folder:        "storehub",
+        folder:        "ClientFlow",
         resource_type: "image",
         // Auto-compress and cap dimensions so we don't store huge files
         transformation: [{ width: 1400, height: 1400, crop: "limit", quality: "auto:good", fetch_format: "auto" }],

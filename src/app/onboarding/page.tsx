@@ -1,9 +1,9 @@
-import { redirect } from "next/navigation";
+﻿import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { completeOnboarding } from "@/app/actions/vendor";
 
-export const metadata = { title: "Set up your store — StoreHub" };
+export const metadata = { title: "Set up your store — ClientFlow" };
 
 const CATEGORIES = [
   { value: "PHYSICAL_GOODS", label: "Physical goods", desc: "Shoes, clothes, books, general retail" },
@@ -77,7 +77,7 @@ export default async function OnboardingPage({
               </label>
               <div className="flex items-center border border-gray-200 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-slate-800">
                 <span className="bg-gray-50 px-4 py-3 text-sm text-gray-400 border-r border-gray-200 whitespace-nowrap select-none">
-                  storehub.ng/shop/
+                  ClientFlow.ng/shop/
                 </span>
                 <input
                   id="username"
