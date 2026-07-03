@@ -1,6 +1,7 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
 import LaunchVideoWrapper from "@/components/LaunchVideoWrapper";
+import { ClientFlowWordmark } from "@/components/ClientFlowLogo";
 
 function Check({ dark = false }: { dark?: boolean }) {
   return (
@@ -38,7 +39,7 @@ export default function LandingPage() {
       {/* ── NAV ── */}
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
-          <span className="text-xl font-bold tracking-tight text-slate-900">ClientFlow</span>
+          <ClientFlowWordmark size={28} dark />
           <nav className="hidden md:flex items-center gap-8 text-sm text-slate-600">
             <a href="#how-it-works" className="hover:text-slate-900 transition-colors">How it works</a>
             <a href="#categories" className="hover:text-slate-900 transition-colors">What you can sell</a>
@@ -655,7 +656,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-start justify-between gap-10">
             <div className="max-w-xs">
-              <p className="text-lg font-bold text-slate-900 mb-2">ClientFlow</p>
+              <ClientFlowWordmark size={28} dark className="mb-2" />
               <p className="text-sm text-slate-400 leading-relaxed">
                 The simplest way for Nigerian sellers to build an online store, share a link, and get paid.
               </p>

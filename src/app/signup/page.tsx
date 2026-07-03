@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { registerUser } from "@/app/actions/auth";
 import { signIn } from "@/lib/auth";
+import ClientFlowLogo from "@/components/ClientFlowLogo";
 
 export const metadata = { title: "Create account — ClientFlow" };
 
@@ -64,7 +65,8 @@ export default async function SignupPage({
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/85 via-slate-900/50 to-slate-900/85" />
 
         <div className="relative z-10 flex flex-col justify-between w-full p-12">
-          <Link href="/" className="text-white text-xl font-bold tracking-tight">
+          <Link href="/" className="flex items-center gap-2 text-white text-xl font-bold tracking-tight">
+            <ClientFlowLogo size={32} />
             ClientFlow
           </Link>
 
@@ -105,7 +107,9 @@ export default async function SignupPage({
         <div className="w-full max-w-md">
 
           <div className="lg:hidden mb-8">
-            <Link href="/" className="text-2xl font-bold text-slate-900">ClientFlow</Link>
+            <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-slate-900">
+              <ClientFlowLogo size={32} /> ClientFlow
+            </Link>
           </div>
 
           <div className="mb-8">
