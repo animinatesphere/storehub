@@ -5,7 +5,15 @@ import { prisma } from "@/lib/prisma";
 import { signIn } from "@/lib/auth";
 import { UserRole } from "@/generated/prisma/client";
 import { redirect } from "next/navigation";
-import { isRedirectError } from "next/dist/client/components/redirect";
+function isRedirect(err: unknown): boolean {
+  return (
+    typeof err === "object" &&
+    err !== null &&
+    "digest" in err &&
+    typeof (err as { digest: unknown }).digest === "string" &&
+    (err as { digest: string }).digest.startsWith("NEXT_REDIRECT")
+  );
+}
 
 export async function registerUser(formData: FormData): Promise<void> {
   const email = formData.get("email") as string;
@@ -33,7 +41,7 @@ export async function registerUser(formData: FormData): Promise<void> {
   try {
     await signIn("credentials", { email, password, redirectTo: role === UserRole.VENDOR ? "/onboarding" : "/marketplace" });
   } catch (e) {
-    if (isRedirectError(e)) throw e;
+    if (isRedirect(e)) throw e;
     redirect("/login?error=1");
   }
 }
@@ -50,7 +58,7 @@ export async function loginUser(formData: FormData) {
       redirectTo: next || "/dashboard",
     });
   } catch (e) {
-    if (isRedirectError(e)) throw e;
+    if (isRedirect(e)) throw e;
     redirect(`/login?error=1${next ? `&next=${encodeURIComponent(next)}` : ""}`);
   }
 }

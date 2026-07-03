@@ -3,6 +3,7 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { TIER_ORDER } from "@/lib/tier";
 import AdsGenerator from "./_components/AdsGenerator";
+import LaunchVideoDownload from "./_components/LaunchVideoDownload";
 
 export const metadata = { title: "Ads Generator — Dashboard" };
 
@@ -70,6 +71,11 @@ export default async function AdsPage() {
         vendorName={vendor.businessName}
         logoUrl={vendor.storefrontSetting?.logoUrl ?? null}
       />
+
+      <div className="mt-10">
+        <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Brand content</p>
+        <LaunchVideoDownload />
+      </div>
     </div>
   );
 }
