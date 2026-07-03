@@ -51,11 +51,18 @@ export async function loginUser(formData: FormData) {
   const password = formData.get("password") as string;
   const next = (formData.get("next") as string) || "";
 
+  // Look up role so we can route to the right place after sign-in
+  const dbUser = await prisma.user.findUnique({
+    where: { email },
+    select: { role: true },
+  });
+  const defaultRedirect = dbUser?.role === UserRole.VENDOR ? "/dashboard" : "/marketplace";
+
   try {
     await signIn("credentials", {
       email,
       password,
-      redirectTo: next || "/dashboard",
+      redirectTo: next || defaultRedirect,
     });
   } catch (e) {
     if (isRedirect(e)) throw e;

@@ -133,7 +133,7 @@ export default async function SignupPage({
             action={async () => {
               "use server";
               await signIn("google", {
-                redirectTo: isVendor ? "/onboarding" : "/marketplace",
+                redirectTo: isVendor ? "/onboarding" : "/auth/redirect",
               });
             }}
           >

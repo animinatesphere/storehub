@@ -102,7 +102,7 @@ export default async function LoginPage({
           <form
             action={async () => {
               "use server";
-              await signIn("google", { redirectTo: next || "/marketplace" });
+              await signIn("google", { redirectTo: next || "/auth/redirect" });
             }}
           >
             <button

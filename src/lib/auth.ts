@@ -18,7 +18,8 @@ declare module "next-auth" {
 }
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.AUTH_SECRET ?? process.env.NEXTAUTH_SECRET,
+  trustHost: true,
   session: { strategy: "jwt" },
 
   providers: [
@@ -60,7 +61,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           create: { email: user.email!, name: user.name, role: UserRole.CUSTOMER },
           update: { name: user.name },
         });
-        // Propagate the persisted role and id back onto the user object
         user.id = dbUser.id;
         user.role = dbUser.role;
       }
