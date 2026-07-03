@@ -22,7 +22,7 @@ export default async function AdminSettingsPage({
     <div className="max-w-2xl mx-auto space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-white">Platform settings</h1>
-        <p className="text-sm text-slate-400 mt-1">Global configuration for StoreHub</p>
+        <p className="text-sm text-slate-400 mt-1">Global configuration for ClientFlow</p>
       </div>
 
       {saved && (
@@ -35,7 +35,7 @@ export default async function AdminSettingsPage({
       <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
         <h2 className="text-sm font-semibold text-white mb-1">Platform commission</h2>
         <p className="text-xs text-slate-500 mb-5">
-          Percentage StoreHub takes from each paid order when a vendor has a Paystack subaccount.
+          Percentage ClientFlow takes from each paid order when a vendor has a Paystack subaccount.
           Set to 0 to disable.
         </p>
         <form

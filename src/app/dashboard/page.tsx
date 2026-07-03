@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
-export const metadata = { title: "Dashboard — StoreHub" };
+export const metadata = { title: "Dashboard — ClientFlow" };
 
 const PAYMENT_BADGE: Record<string, string> = {
   PENDING: "bg-amber-50 text-amber-700 border border-amber-100",

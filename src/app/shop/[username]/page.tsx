@@ -12,10 +12,10 @@ export async function generateMetadata({ params }: { params: Promise<{ username:
     where:  { username },
     select: { businessName: true, storefrontSetting: { select: { bioText: true } } },
   });
-  if (!vendor) return { title: "Store not found — StoreHub" };
+  if (!vendor) return { title: "Store not found — ClientFlow" };
   return {
-    title:       `${vendor.businessName} — StoreHub`,
-    description: vendor.storefrontSetting?.bioText ?? `Shop from ${vendor.businessName} on StoreHub.`,
+    title:       `${vendor.businessName} — ClientFlow`,
+    description: vendor.storefrontSetting?.bioText ?? `Shop from ${vendor.businessName} on ClientFlow.`,
   };
 }
 

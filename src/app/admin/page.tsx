@@ -5,7 +5,7 @@ import { SubscriptionTier } from "@/generated/prisma/client";
 
 export const dynamic = "force-dynamic";
 
-export const metadata = { title: "Admin overview — StoreHub" };
+export const metadata = { title: "Admin overview — ClientFlow" };
 
 function naira(n: number) {
   return new Intl.NumberFormat("en-NG", {
@@ -70,7 +70,7 @@ export default async function AdminOverviewPage() {
     <div className="max-w-6xl mx-auto space-y-8">
       <div>
         <h1 className="text-2xl font-bold text-white">Platform overview</h1>
-        <p className="text-sm text-slate-400 mt-1">All-time stats for StoreHub</p>
+        <p className="text-sm text-slate-400 mt-1">All-time stats for ClientFlow</p>
       </div>
 
       {/* KPI grid */}

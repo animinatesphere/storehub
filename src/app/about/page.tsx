@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About StoreHub — Nigeria's Seller Platform",
-  description: "StoreHub helps anyone in Nigeria sell online in minutes. Build a storefront, share a link, and accept payments — no coding needed.",
+  title: "About ClientFlow — Nigeria's Seller Platform",
+  description: "ClientFlow helps anyone in Nigeria sell online in minutes. Build a storefront, share a link, and accept payments — no coding needed.",
 };
 
 export default function AboutPage() {
@@ -30,12 +30,12 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-emerald-950 text-white py-20 sm:py-28">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-4">About StoreHub</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-4">About ClientFlow</p>
           <h1 className="text-4xl sm:text-5xl font-black tracking-tight mb-6">
             Built for Nigerian sellers
           </h1>
           <p className="text-lg text-emerald-100/70 leading-relaxed">
-            StoreHub gives every Nigerian business owner a professional online presence — without needing a developer, a website, or a big budget.
+            ClientFlow gives every Nigerian business owner a professional online presence — without needing a developer, a website, or a big budget.
           </p>
         </div>
       </section>
@@ -50,10 +50,10 @@ export default function AboutPage() {
                 Nigeria has millions of talented entrepreneurs selling on Instagram DMs, WhatsApp messages, and Facebook groups — yet they lack the tools that properly represent their businesses online.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                StoreHub changes that. In minutes, any seller can have a professional storefront with a unique link, beautiful product pages, and Paystack-powered checkout. No coding. No expensive agencies. Just a link you&apos;re proud to share.
+                ClientFlow changes that. In minutes, any seller can have a professional storefront with a unique link, beautiful product pages, and Paystack-powered checkout. No coding. No expensive agencies. Just a link you&apos;re proud to share.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                We believe commerce should be accessible. Whether you sell fashion, food, electronics, handmade goods, or services — StoreHub is the platform that grows with your business.
+                We believe commerce should be accessible. Whether you sell fashion, food, electronics, handmade goods, or services — ClientFlow is the platform that grows with your business.
               </p>
             </div>
 
@@ -146,7 +146,7 @@ export default function AboutPage() {
             Ready to start selling?
           </h2>
           <p className="text-emerald-100 mb-8">
-            Join thousands of Nigerian sellers already using StoreHub.
+            Join thousands of Nigerian sellers already using ClientFlow.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
@@ -168,7 +168,7 @@ export default function AboutPage() {
       {/* Footer */}
       <footer className="border-t border-gray-100 py-8">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-4 items-center">
-          <p className="text-xs text-gray-400">© {new Date().getFullYear()} StoreHub. All rights reserved.</p>
+          <p className="text-xs text-gray-400">© {new Date().getFullYear()} ClientFlow. All rights reserved.</p>
           <nav className="flex gap-6 text-xs text-gray-400">
             <Link href="/privacy" className="hover:text-gray-700 transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-gray-700 transition-colors">Terms</Link>

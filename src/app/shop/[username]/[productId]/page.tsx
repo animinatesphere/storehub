@@ -29,9 +29,9 @@ export async function generateMetadata({
     where: { id: productId },
     select: { title: true, description: true },
   });
-  if (!product) return { title: "Product not found — StoreHub" };
+  if (!product) return { title: "Product not found — ClientFlow" };
   return {
-    title: `${product.title} — StoreHub`,
+    title: `${product.title} — ClientFlow`,
     description: product.description ?? undefined,
   };
 }
@@ -82,7 +82,7 @@ export default async function ProductPage({
             </svg>
             {vendor.businessName}
           </Link>
-          <Link href="/" className="text-xs font-semibold text-slate-900">StoreHub</Link>
+          <Link href="/" className="text-xs font-semibold text-slate-900">ClientFlow</Link>
           <Link href="/login" className="text-xs text-slate-400 hover:text-slate-600 transition-colors">Sign in</Link>
         </div>
       </header>
@@ -228,7 +228,7 @@ export default async function ProductPage({
         <p className="text-xs text-slate-400">
           Powered by{" "}
           <Link href="/" className="text-slate-600 font-medium hover:text-slate-900 transition-colors">
-            StoreHub
+            ClientFlow
           </Link>
         </p>
       </footer>

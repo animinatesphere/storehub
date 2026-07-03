@@ -35,7 +35,7 @@ export async function GET() {
   return new NextResponse(csv, {
     headers: {
       "Content-Type":        "text/csv; charset=utf-8",
-      "Content-Disposition": `attachment; filename="storehub-orders-${Date.now()}.csv"`,
+      "Content-Disposition": `attachment; filename="clientflow-orders-${Date.now()}.csv"`,
     },
   });
 }

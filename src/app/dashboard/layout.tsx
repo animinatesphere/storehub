@@ -44,7 +44,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
         {/* Logo */}
         <div className="px-5 h-14 flex items-center border-b border-slate-100">
           <Link href="/" className="text-base font-bold text-slate-900 tracking-tight">
-            StoreHub
+            ClientFlow
           </Link>
         </div>
 
@@ -101,7 +101,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
 
       {/* ── MOBILE TOP BAR ── */}
       <div className="lg:hidden fixed top-0 inset-x-0 z-30 bg-white border-b border-slate-100 h-14 flex items-center justify-between px-5">
-        <Link href="/" className="text-base font-bold text-slate-900">StoreHub</Link>
+        <Link href="/" className="text-base font-bold text-slate-900">ClientFlow</Link>
         <div className="flex items-center gap-3">
           <span className="text-sm font-medium text-slate-600">{vendor.businessName}</span>
           <div className="w-7 h-7 rounded-lg bg-slate-900 text-white text-xs font-bold flex items-center justify-center">

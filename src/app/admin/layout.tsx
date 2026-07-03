@@ -24,7 +24,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       {/* ── Desktop sidebar ── */}
       <aside className="hidden lg:flex w-56 shrink-0 flex-col border-r border-slate-800/70 fixed top-0 left-0 h-full z-30">
         <div className="h-14 flex items-center gap-2 px-5 border-b border-slate-800/70">
-          <span className="text-sm font-bold text-white">StoreHub</span>
+          <span className="text-sm font-bold text-white">ClientFlow</span>
           <span className="text-xs font-semibold text-red-400 bg-red-900/40 px-1.5 py-0.5 rounded">
             Admin
           </span>

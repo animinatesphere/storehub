@@ -481,7 +481,7 @@ export default function WarmTemplate({ vendor, username }: TemplateProps) {
             </div>
 
             <div style={{ fontFamily: "system-ui, sans-serif" }}>
-              <p className="text-[10px] font-bold uppercase tracking-widest mb-4" style={{ color: `${WARM}60` }}>StoreHub</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest mb-4" style={{ color: `${WARM}60` }}>ClientFlow</p>
               <ul className="space-y-2.5">
                 <li><Link href="/" className="text-sm transition-colors hover:text-white" style={{ color: `${WARM}80` }}>Home</Link></li>
                 <li><Link href="/marketplace" className="text-sm transition-colors hover:text-white" style={{ color: `${WARM}80` }}>Marketplace</Link></li>
@@ -498,7 +498,7 @@ export default function WarmTemplate({ vendor, username }: TemplateProps) {
             <p className="text-xs" style={{ color: `${WARM}40` }}>
               Powered by{" "}
               <Link href="/" className="font-semibold hover:text-white transition-colors" style={{ color: brandColor }}>
-                StoreHub
+                ClientFlow
               </Link>
             </p>
           </div>

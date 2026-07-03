@@ -4,7 +4,7 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { signOut } from "@/lib/auth";
 
-export const metadata = { title: "My account — StoreHub" };
+export const metadata = { title: "My account — ClientFlow" };
 
 const PAYMENT_BADGE: Record<string, string> = {
   PENDING:  "bg-amber-50 text-amber-700 border border-amber-100",
@@ -51,7 +51,7 @@ export default async function AccountPage() {
           <Link href="/marketplace" className="text-xs text-slate-400 hover:text-slate-600 transition-colors">
             Marketplace
           </Link>
-          <Link href="/" className="text-sm font-bold text-slate-900">StoreHub</Link>
+          <Link href="/" className="text-sm font-bold text-slate-900">ClientFlow</Link>
           {user?.vendor ? (
             <Link href="/dashboard" className="text-xs text-slate-600 hover:text-slate-900 transition-colors">
               Vendor dashboard

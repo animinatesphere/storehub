@@ -396,9 +396,9 @@ export default function MarketTemplate({ vendor, username }: TemplateProps) {
             <div>
               <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-3">Platform</p>
               <ul className="space-y-2">
-                <li><Link href="/" className="text-xs text-gray-400 hover:text-white transition-colors">StoreHub Home</Link></li>
+                <li><Link href="/" className="text-xs text-gray-400 hover:text-white transition-colors">ClientFlow Home</Link></li>
                 <li><Link href="/marketplace" className="text-xs text-gray-400 hover:text-white transition-colors">Marketplace</Link></li>
-                <li><Link href="/about" className="text-xs text-gray-400 hover:text-white transition-colors">About StoreHub</Link></li>
+                <li><Link href="/about" className="text-xs text-gray-400 hover:text-white transition-colors">About ClientFlow</Link></li>
               </ul>
             </div>
 
@@ -419,7 +419,7 @@ export default function MarketTemplate({ vendor, username }: TemplateProps) {
             <p className="text-[11px] text-gray-600">
               Powered by{" "}
               <Link href="/" className="font-semibold hover:text-white transition-colors" style={{ color: brandColor }}>
-                StoreHub
+                ClientFlow
               </Link>
               {" "}· Nigeria&apos;s Seller Platform
             </p>

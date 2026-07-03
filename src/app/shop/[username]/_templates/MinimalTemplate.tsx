@@ -480,7 +480,7 @@ export default function MinimalTemplate({ vendor, username }: TemplateProps) {
             </div>
 
             <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">StoreHub</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">ClientFlow</p>
               <ul className="space-y-2.5">
                 <li><Link href="/" className="text-sm text-gray-400 hover:text-white transition-colors">Home</Link></li>
                 <li><Link href="/marketplace" className="text-sm text-gray-400 hover:text-white transition-colors">Marketplace</Link></li>
@@ -497,7 +497,7 @@ export default function MinimalTemplate({ vendor, username }: TemplateProps) {
             <p className="text-xs text-gray-600">
               Powered by{" "}
               <Link href="/" className="font-semibold hover:text-white transition-colors" style={{ color: brandColor }}>
-                StoreHub
+                ClientFlow
               </Link>
             </p>
           </div>

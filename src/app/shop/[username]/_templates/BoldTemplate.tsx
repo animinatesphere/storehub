@@ -431,7 +431,7 @@ export default function BoldTemplate({ vendor, username }: TemplateProps) {
             </div>
 
             <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/20 mb-4">StoreHub</p>
+              <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/20 mb-4">ClientFlow</p>
               <ul className="space-y-2.5">
                 <li><Link href="/" className="text-sm text-white/40 hover:text-white transition-colors">Home</Link></li>
                 <li><Link href="/marketplace" className="text-sm text-white/40 hover:text-white transition-colors">Marketplace</Link></li>
@@ -447,7 +447,7 @@ export default function BoldTemplate({ vendor, username }: TemplateProps) {
             <p className="text-xs text-white/15">
               Powered by{" "}
               <Link href="/" className="font-bold transition-colors hover:text-white" style={{ color: brandColor }}>
-                StoreHub
+                ClientFlow
               </Link>
             </p>
           </div>

@@ -4,7 +4,7 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { TIER } from "@/lib/tier";
 
-export const metadata = { title: "Analytics — StoreHub" };
+export const metadata = { title: "Analytics — ClientFlow" };
 
 function naira(n: number) {
   return new Intl.NumberFormat("en-NG", {
