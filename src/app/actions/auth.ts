@@ -5,6 +5,7 @@ import { prisma } from "@/lib/prisma";
 import { signIn } from "@/lib/auth";
 import { UserRole } from "@/generated/prisma/client";
 import { redirect } from "next/navigation";
+import { isRedirectError } from "next/dist/client/components/redirect";
 
 export async function registerUser(formData: FormData): Promise<void> {
   const email = formData.get("email") as string;
@@ -29,7 +30,12 @@ export async function registerUser(formData: FormData): Promise<void> {
     data: { email, name, passwordHash, role },
   });
 
-  await signIn("credentials", { email, password, redirectTo: role === UserRole.VENDOR ? "/onboarding" : "/marketplace" });
+  try {
+    await signIn("credentials", { email, password, redirectTo: role === UserRole.VENDOR ? "/onboarding" : "/marketplace" });
+  } catch (e) {
+    if (isRedirectError(e)) throw e;
+    redirect("/login?error=1");
+  }
 }
 
 export async function loginUser(formData: FormData) {
@@ -37,9 +43,14 @@ export async function loginUser(formData: FormData) {
   const password = formData.get("password") as string;
   const next = (formData.get("next") as string) || "";
 
-  await signIn("credentials", {
-    email,
-    password,
-    redirectTo: next || undefined,
-  });
+  try {
+    await signIn("credentials", {
+      email,
+      password,
+      redirectTo: next || "/dashboard",
+    });
+  } catch (e) {
+    if (isRedirectError(e)) throw e;
+    redirect(`/login?error=1${next ? `&next=${encodeURIComponent(next)}` : ""}`);
+  }
 }
