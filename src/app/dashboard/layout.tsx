@@ -6,7 +6,7 @@ import DashboardNav from "./_components/nav";
 
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
   const session = await auth();
-  if (!session?.user?.id) redirect("/login");
+  if (!session?.user?.id) redirect("/login?next=/dashboard");
 
   const vendor = await prisma.vendor.findUnique({
     where: { userId: session.user.id },

@@ -5,21 +5,37 @@ import { prisma } from "@/lib/prisma";
 import { signIn } from "@/lib/auth";
 import { UserRole } from "@/generated/prisma/client";
 import { redirect } from "next/navigation";
-function isRedirect(err: unknown): boolean {
-  return (
-    typeof err === "object" &&
-    err !== null &&
-    "digest" in err &&
-    typeof (err as { digest: unknown }).digest === "string" &&
-    (err as { digest: string }).digest.startsWith("NEXT_REDIRECT")
-  );
+
+export async function loginUser(formData: FormData): Promise<void> {
+  const email    = formData.get("email")    as string;
+  const password = formData.get("password") as string;
+  const next     = (formData.get("next")    as string) || "";
+
+  const errUrl = `/login?error=1${next ? `&next=${encodeURIComponent(next)}` : ""}`;
+
+  // Validate credentials ourselves so we can show an error without wrapping signIn in try/catch
+  const dbUser = await prisma.user.findUnique({
+    where:  { email },
+    select: { passwordHash: true, role: true },
+  });
+
+  if (!dbUser?.passwordHash) redirect(errUrl);
+
+  const valid = await bcrypt.compare(password, dbUser.passwordHash);
+  if (!valid) redirect(errUrl);
+
+  // Credentials are correct — determine destination based on role
+  const dest = next || (dbUser.role === UserRole.VENDOR ? "/dashboard" : "/marketplace");
+
+  // Do NOT wrap signIn in try/catch — its NEXT_REDIRECT must propagate to Next.js directly
+  await signIn("credentials", { email, password, redirectTo: dest });
 }
 
 export async function registerUser(formData: FormData): Promise<void> {
-  const email = formData.get("email") as string;
+  const email    = formData.get("email")    as string;
   const password = formData.get("password") as string;
-  const name = formData.get("name") as string;
-  const role = (formData.get("role") as string) === "vendor"
+  const name     = formData.get("name")     as string;
+  const role     = (formData.get("role") as string) === "vendor"
     ? UserRole.VENDOR
     : UserRole.CUSTOMER;
 
@@ -28,44 +44,13 @@ export async function registerUser(formData: FormData): Promise<void> {
   }
 
   const existing = await prisma.user.findUnique({ where: { email } });
-  if (existing) {
-    redirect("/signup?error=email_taken");
-  }
+  if (existing) redirect("/signup?error=email_taken");
 
   const passwordHash = await bcrypt.hash(password, 12);
+  await prisma.user.create({ data: { email, name, passwordHash, role } });
 
-  await prisma.user.create({
-    data: { email, name, passwordHash, role },
-  });
+  const dest = role === UserRole.VENDOR ? "/onboarding" : "/marketplace";
 
-  try {
-    await signIn("credentials", { email, password, redirectTo: role === UserRole.VENDOR ? "/onboarding" : "/marketplace" });
-  } catch (e) {
-    if (isRedirect(e)) throw e;
-    redirect("/login?error=1");
-  }
-}
-
-export async function loginUser(formData: FormData) {
-  const email = formData.get("email") as string;
-  const password = formData.get("password") as string;
-  const next = (formData.get("next") as string) || "";
-
-  // Look up role so we can route to the right place after sign-in
-  const dbUser = await prisma.user.findUnique({
-    where: { email },
-    select: { role: true },
-  });
-  const defaultRedirect = dbUser?.role === UserRole.VENDOR ? "/dashboard" : "/marketplace";
-
-  try {
-    await signIn("credentials", {
-      email,
-      password,
-      redirectTo: next || defaultRedirect,
-    });
-  } catch (e) {
-    if (isRedirect(e)) throw e;
-    redirect(`/login?error=1${next ? `&next=${encodeURIComponent(next)}` : ""}`);
-  }
+  // Let NEXT_REDIRECT propagate naturally
+  await signIn("credentials", { email, password, redirectTo: dest });
 }
